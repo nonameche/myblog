@@ -100,6 +100,7 @@
   }
 
   .app-sidebar {
+    position: relative;
     border-right: 1px solid #ebedf0;
     height: calc(100vh - 64px - 40px);
     text-align: center;
@@ -180,6 +181,13 @@
       a {
         color: inherit;
       }
+    }
+    .outer{
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%,0);
+      width: 100%;
     }
   }
 

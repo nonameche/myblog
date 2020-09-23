@@ -59,6 +59,13 @@ function SideBar(props) {
           </Tag>
         ))}
       </div>
+      <div class='outer'>
+        <div id='footer-info' class='inner' style={{textAlign: 'center'}}>
+      Copyright&copy; 2020 <br />
+          <p>nonameche 保留所有权利</p>
+          <a href='https://beian.miit.gov.cn' target='_blank' rel='noopener'>鲁ICP备19013033号-1</a>
+        </div>
+      </div>
     </aside>
   )
 }
