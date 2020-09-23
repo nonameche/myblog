@@ -16,10 +16,10 @@ jobs:
     steps:  # 自动化步骤
     - uses: actions/checkout@v2   # 第一步，下载代码仓库
 
-    - name: Install Dependencies  # 第二步，打包代码
-      run: yarn
+    - name: Install an Build  # 第二步，打包代码
+      run: npm install
     - name: Build
-      run: yarn build
+      run: npm run build
 
     - name: Deploy to Server  # 第三步，rsync推送文件
       uses: AEnterprise/rsync-deploy@v1.0  # 使用别人包装好的步骤镜像
