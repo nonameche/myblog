@@ -35,13 +35,19 @@ jobs:
     - name: Build              # 第三步，打包代码
       run: npm run build --if-present
 
+    - name: Upload result
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build
+
   deploy:
     name: Deploy
     needs: build-production
     runs-on: ubuntu-latest
     steps:
     - name: Download result
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v2
       with:
         name: build
 
