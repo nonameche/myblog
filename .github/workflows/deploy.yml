@@ -12,7 +12,9 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest   # 使用ubuntu系统镜像运行自动化脚本(我的服务器是centos系统)
-
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:  # 自动化步骤
     - uses: actions/checkout@v2   # 第一步，下载代码仓库
 
@@ -21,6 +23,11 @@ jobs:
     # with:
     #   path: ~/.npm
     #   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies  
       run: npm install
