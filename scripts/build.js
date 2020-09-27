@@ -101,7 +101,6 @@ checkBrowsers(paths.appPath, isInteractive)
         buildFolder,
         useYarn
       );
-
       process.exit(0);
     },
     err => {

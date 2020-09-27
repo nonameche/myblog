@@ -1,4 +1,4 @@
-name: Deploy site files
+name: Blog CI/CD
 
 on:
   push:
@@ -11,12 +11,13 @@ on:
 jobs:
   build-production:
 
-    runs-on: ubuntu-latest   # 使用ubuntu系统镜像运行自动化脚本(我的服务器是centos系统)
+    runs-on: ubuntu-latest   # 使用ubuntu系统镜像运行自动化脚本(温馨提示：和你所使用的操作系统及服务器系统无关，我本地用的windows10,云服务器用的centos)
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [12.x] # 配置所需node版本
     steps:  # 自动化步骤
-    - uses: actions/checkout@v2   # 第一步，下载代码仓库
+    - name: Checkout code    # 第一步，检出仓库副本
+    - uses: actions/checkout@v2   
 
     # - name: Cache node modules
     # uses: actions/cache@v1
@@ -24,7 +25,7 @@ jobs:
     #   path: ~/.npm
     #   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }} #规定node.js版本(可不配置)
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
@@ -32,10 +33,10 @@ jobs:
     - name: Install dependencies  # 第二步，安装依赖
       run: npm install
 
-    - name: Build              # 第三步，打包代码
+    - name: Build                 # 第三步，打包代码
       run: npm run build --if-present
 
-    - name: Deploy to Server  # 第四步，rsync推送文件
+    - name: Deploy to Server      # 第四步，rsync推送文件
       uses: AEnterprise/rsync-deploy@v1.0  # 使用别人包装好的步骤镜像
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}   # 引用配置，SSH私钥
