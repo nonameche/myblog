@@ -35,28 +35,6 @@ jobs:
     - name: Build              # 第三步，打包代码
       run: npm run build --if-present
 
-    - name: Upload result
-      uses: actions/upload-artifact@v2
-      with:
-        name: build
-        path: build
-
-  deploy:
-    name: Deploy
-    needs: build-production
-    runs-on: ubuntu-latest
-    steps:
-    - name: Download result
-      uses: actions/download-artifact@v2
-      with:
-        name: build
-
-    - name: move build
-      run: mv build/* .
-
-    - name: delete build
-      run: rm -rf build
-
     - name: Deploy to Server  # 第四步，rsync推送文件
       uses: AEnterprise/rsync-deploy@v1.0  # 使用别人包装好的步骤镜像
       env:
@@ -67,6 +45,8 @@ jobs:
         SERVER_IP: ${{ secrets.SSH_HOST }}  # 引用配置，服务器的host名（IP或者域名domain.com）
         USERNAME: ${{ secrets.SSH_USERNAME }}  # 引用配置，服务器登录名
         SERVER_DESTINATION: /www/wwwroot/lmsworld.cn/   # 部署到目标文件夹
+
+
 
     # - name: Restart server   # 第五步，重启服务
     #   uses: appleboy/ssh-action@master
