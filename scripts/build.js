@@ -91,8 +91,7 @@ checkBrowsers(paths.appPath, isInteractive)
         WARN_AFTER_BUNDLE_GZIP_SIZE,
         WARN_AFTER_CHUNK_GZIP_SIZE
       );
-      console.log();
-
+      console.log();      
       const appPackage = require(paths.appPackageJson);
       const publicUrl = paths.publicUrl;
       const publicPath = config.output.publicPath;
@@ -104,6 +103,8 @@ checkBrowsers(paths.appPath, isInteractive)
         buildFolder,
         useYarn
       );
+
+      process.exit(0);
     },
     err => {
       console.log(chalk.red('Failed to compile.\n'));
