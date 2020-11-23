@@ -5,8 +5,10 @@ import SvgIcon from '@/components/SvgIcon'
 import Href from '@/components/Href'
 import MyInfo from '@/views/web/about/MyInfo'
 
-// API_BASE_URL
+// // API_BASE_URL
 export const API_BASE_URL = 'https://lmsworld.cn/api'
+// API_BASE_URL
+// export const API_BASE_URL = 'http://127.0.0.1:6060'
 
 // project config
 export const HEADER_BLOG_NAME = '闲情偶寄' // header title 显示的名字

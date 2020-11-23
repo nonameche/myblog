@@ -63,7 +63,7 @@ function SideBar(props) {
         <div id='footer-info' class='inner' style={{textAlign: 'center'}}>
       Copyright&copy; 2020 <br />
           <p>nonameche 保留所有权利</p>
-          <a href='https://beian.miit.gov.cn' target='_blank' rel='noopener noreferrer'>鲁ICP备19013033号-1</a>
+          <a href='https://beian.miit.gov.cn' target='_blank' rel='noopener noreferrer' style={{color: '#000000A6'}}>鲁ICP备19013033号-1</a>
         </div>
       </div>
     </aside>

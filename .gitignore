@@ -27,4 +27,5 @@ yarn-error.log*
 
 /.history
 
-/server/config/index.js
+/server/config
+/.github/workflows/*

@@ -174,8 +174,8 @@ module.exports = {
     'array-bracket-spacing': [2, 'never'],
     'no-path-concat': 'off', // 可以直接使用 __dirname
     'prefer-promise-reject-errors': 0,
-    "react-hooks/rules-of-hooks": "off",
-    'react-hooks/exhaustive-deps': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    'react-hooks/exhaustive-deps': 'warn',
     'jsx-a11y/anchor-is-valid': 'off' 
   }
 }

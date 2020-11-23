@@ -94,7 +94,15 @@
       // user info
       .header-userInfo {
         float: right;
-        padding: 0 40px 0 16px;
+        padding: 0 20px 0 16px;
+      }
+      // menu
+      .menu{
+        float: right;
+        padding-right: 20px;
+        button{
+          vertical-align: middle;
+        }
       }
     }
   }
@@ -270,5 +278,21 @@
 @media screen and (max-width: 1300px) {
   .app-container .app-wrapper .app-main {
     padding: 0 20px;
+  }
+}
+// 切换黑暗模式
+body.light-mode {
+  .app-container .app-wrapper,
+  .app-container .app-header{
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+}
+body.dark-mode {
+  .app-container .app-wrapper,
+  .app-container .app-header{
+    background-color: #1a1919;
+    color: #999;
   }
 }
