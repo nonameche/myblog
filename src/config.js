@@ -1,5 +1,5 @@
 import React from 'react'
-import { GithubFilled } from '@ant-design/icons';
+import { GithubFilled } from '@ant-design/icons'
 import SvgIcon from '@/components/SvgIcon'
 
 import Href from '@/components/Href'

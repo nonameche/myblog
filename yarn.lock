@@ -3134,9 +3134,14 @@
   "version" "1.2.7"
 
 "core-js@^2.4.0":
-  "integrity" "sha1-iluDkfjMcBPacDQRzltYVwYwDX8="
-  "resolved" "https://registry.npm.taobao.org/core-js/download/core-js-2.6.10.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-2.6.10.tgz"
-  "version" "2.6.10"
+  "integrity" "sha1-OIMUafmSK97Y7iHJ3EaYXgOZMIw="
+  "resolved" "https://registry.npm.taobao.org/core-js/download/core-js-2.6.11.tgz?cache=0&sync_timestamp=1604675508568&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-2.6.11.tgz"
+  "version" "2.6.11"
+
+"core-js@^3.7.0":
+  "integrity" "sha1-sKdhoCSIV3r7+XF55Ggb9JVoUg8="
+  "resolved" "https://registry.npm.taobao.org/core-js/download/core-js-3.7.0.tgz?cache=0&sync_timestamp=1604675508568&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.7.0.tgz"
+  "version" "3.7.0"
 
 "core-js@3.2.1":
   "integrity" "sha1-zUHzhTTabMWffbBQ/mcwfemGiwk="
