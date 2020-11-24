@@ -8,5 +8,6 @@ export default function useBreadcrumb(list = []) {
     return () => {
       bus.emit('breadcrumbList', [])
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 }
