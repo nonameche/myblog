@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'antd'
+import { GithubFilled } from '@ant-design/icons';
 import SvgIcon from '@/components/SvgIcon'
 
 import Href from '@/components/Href'
@@ -22,7 +22,7 @@ export const SIDEBAR = {
   homepages: {
     github: {
       link: 'https://github.com/nonameche',
-      icon: <Icon type='github' theme='filled' className='homepage-icon' />
+      icon: <GithubFilled className='homepage-icon' />
     },
     juejin: {
       link: 'https://juejin.im/user/782508010771992',

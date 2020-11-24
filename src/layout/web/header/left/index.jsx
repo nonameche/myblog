@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Icon, Dropdown, Menu, Input, message } from 'antd'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
+import { Dropdown, Menu, Input, message } from 'antd'
 import { Link } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
 
@@ -38,13 +40,13 @@ const HeaderLeft = props => {
       {navList.map(nav => (
         <Menu.Item key={nav.link}>
           <Link to={nav.link}>
-            {nav.icon && <Icon type={nav.icon} style={{ marginRight: 15 }} />}
+            {nav.icon && <LegacyIcon type={nav.icon} style={{ marginRight: 15 }} />}
             <span className='nav-text'>{nav.title}</span>
           </Link>
         </Menu.Item>
       ))}
       <Menu.Item key={'search'}>
-        <Icon type='search' />
+        <SearchOutlined />
         <Input
           className='search-input'
           onClick={clickSearch}
@@ -67,7 +69,7 @@ const HeaderLeft = props => {
         trigger={['click']}
         overlay={menu}
         getPopupContainer={() => document.querySelector('.app-header .header-left')}>
-        <Icon type='menu-o' className='header-dropdown-icon' />
+        <MenuOutlined className='header-dropdown-icon' />
       </Dropdown>
     </div>
   )

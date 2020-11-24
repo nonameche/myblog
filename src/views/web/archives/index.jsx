@@ -6,8 +6,10 @@ import { ARCHIVES_PAGESIZE } from '@/utils/config'
 // methods
 import { groupBy } from '@/utils'
 
+import { ClockCircleOutlined } from '@ant-design/icons'
+
 // components
-import { Timeline, Icon, Spin } from 'antd'
+import { Timeline, Spin } from 'antd'
 import { Link } from 'react-router-dom'
 import Pagination from '@/components/Pagination'
 
@@ -39,7 +41,7 @@ function Archives(props) {
                 </Timeline.Item>
               )}
 
-              <Timeline.Item dot={<Icon type='clock-circle-o' style={{ fontSize: '16px' }} />} color='red'>
+              <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />} color='red'>
                 <div className='year'>
                   {d[0]['createdAt'].slice(0, 4)}
                   ...

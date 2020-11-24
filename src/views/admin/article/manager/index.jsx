@@ -1,6 +1,8 @@
 import React, { Component, useState, useEffect } from 'react'
 import { connect, useSelector, useDispatch } from 'react-redux'
-import { Table, Form, Tag, Switch, message, Input, Button, Popconfirm, Select } from 'antd'
+import { Form } from '@ant-design/compatible'
+import '@ant-design/compatible/assets/index.css'
+import { Table, Tag, Switch, message, Input, Button, Popconfirm, Select } from 'antd'
 
 import axios from '@/utils/axios'
 

@@ -12,7 +12,10 @@ import useAjaxLoading from '@/hooks/useAjaxLoading'
 
 // components
 import SvgIcon from '@/components/SvgIcon'
-import { Comment, Avatar, Form, Button, Divider, Input, Icon, Menu, Dropdown, message, Modal } from 'antd'
+import { DownOutlined, GithubFilled, InfoCircleOutlined } from '@ant-design/icons'
+import { Form } from '@ant-design/compatible'
+import '@ant-design/compatible/assets/index.css'
+import { Comment, Avatar, Button, Divider, Input, Menu, Dropdown, message, Modal } from 'antd'
 import List from './list' // 评论列表
 import AppAvatar from '@/components/Avatar'
 
@@ -27,7 +30,7 @@ const Editor = ({ onChange, onSubmit, submitting, value, articleId }) => (
     </Form.Item>
     <Form.Item>
       <div className='controls'>
-        <Icon type='info-circle' className='controls-tip-icon' />
+        <InfoCircleOutlined className='controls-tip-icon' />
         <span className='controls-tip'>支持 Markdown 语法</span>
         <Button className='disscus-btn' htmlType='submit' loading={submitting} onClick={onSubmit} type='primary'>
           {articleId !== -1 ? '添加评论' : '留言'}
@@ -101,7 +104,7 @@ function Discuss(props) {
         <span className='discuss-user'>
           <Dropdown overlay={renderDropdownMenu()} trigger={['click', 'hover']}>
             <span>
-              {username || '未登录用户'} <Icon type='down' />
+              {username || '未登录用户'} <DownOutlined />
             </span>
           </Dropdown>
         </span>
@@ -113,7 +116,7 @@ function Discuss(props) {
           username ? (
             <AppAvatar userInfo={userInfo} />
           ) : (
-            <Icon type='github' theme='filled' style={{ fontSize: 40, margin: '5px 5px 0 0' }} />
+            <GithubFilled style={{ fontSize: 40, margin: '5px 5px 0 0' }} />
           )
         }
         content={

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Icon, Input, Button, Modal } from 'antd'
+import { GithubOutlined } from '@ant-design/icons'
+import { Form } from '@ant-design/compatible'
+import '@ant-design/compatible/assets/index.css'
+import { Input, Button, Modal } from 'antd'
 import { useLocation } from 'react-router-dom'
 
 import { GITHUB } from '@/config'
@@ -125,7 +128,7 @@ function SignModal(props) {
         {type}
       </Button>
       {GITHUB.enable && (
-        <Button block icon='github' onClick={githubLogin} style={{ marginTop: 10 }}>
+        <Button block icon={<GithubOutlined />} onClick={githubLogin} style={{ marginTop: 10 }}>
           github login
         </Button>
       )}

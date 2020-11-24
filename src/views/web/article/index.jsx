@@ -8,8 +8,10 @@ import axios from '@/utils/axios'
 import { translateMarkdown, calcCommentsCount } from '@/utils'
 import useAjaxLoading from '@/hooks/useAjaxLoading'
 
+import { MenuOutlined } from '@ant-design/icons'
+
 // components
-import { Drawer, Icon, Divider, Spin } from 'antd'
+import { Drawer, Divider, Spin } from 'antd'
 import ArticleTag from '@/components/ArticleTag'
 import SvgIcon from '@/components/SvgIcon'
 import Navigation from './Navigation'
@@ -83,7 +85,7 @@ function Article(props) {
         {isFoldNavigation ? (
           <>
             <div className='drawer-btn' onClick={e => setDrawerVisible(true)}>
-              <Icon type='menu-o' className='nav-phone-icon' />
+              <MenuOutlined className='nav-phone-icon' />
             </div>
             <Drawer
               title={title}

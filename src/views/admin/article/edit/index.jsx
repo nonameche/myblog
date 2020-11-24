@@ -4,6 +4,7 @@ import { connect, useSelector } from 'react-redux'
 import './index.less'
 
 import axios from '@/utils/axios'
+import { Icon as LegacyIcon } from '@ant-design/compatible'
 import { Button, Input, Modal, BackTop, message } from 'antd'
 import MdEditor from '@/components/MdEditor'
 import List from './Tag'
@@ -136,7 +137,7 @@ function Edit(props) {
         disabled={!title}
         className='action-icon'
         title={editId ? '更新' : '新增'}
-        icon={editId ? 'file-sync' : 'plus'}
+        icon={<LegacyIcon type={editId ? 'file-sync' : 'plus'} />}
         onClick={() => {
           editId ? update() : add()
         }}
