@@ -18,5 +18,10 @@ export default [
     icon: 'user',
     title: '关于',
     link: '/about'
+  },
+  {
+    icon: 'edit-o',
+    title: '旁门左道',
+    link: '/menu'
   }
 ]
