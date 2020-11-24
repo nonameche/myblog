@@ -27,6 +27,9 @@
         border: none;
         border-bottom: 1px solid #ddd;
       }
+      .menu{
+        display: none;
+      }
     }
     .header-right {
       height: 64px;
@@ -97,10 +100,10 @@
         padding: 0 20px 0 16px;
       }
       // menu
-      .menu{
+      .menu {
         float: right;
         padding-right: 20px;
-        button{
+        button {
           vertical-align: middle;
         }
       }
@@ -190,11 +193,11 @@
         color: inherit;
       }
     }
-    .outer{
+    .outer {
       position: relative;
       bottom: 10px;
       left: 50%;
-      transform: translate(-50%,30px);
+      transform: translate(-50%, 30px);
       width: 100%;
     }
   }
@@ -231,7 +234,13 @@
     height: 22px;
     z-index: 1;
   }
-
+  .menu{
+    display: block!important;
+    height: 23px;
+    position: absolute;
+    top: 24px;
+    right: 57px;
+  }
   .app-container .post-time {
     display: block;
   }
@@ -283,7 +292,7 @@
 // 切换黑暗模式
 body.light-mode {
   .app-container .app-wrapper,
-  .app-container .app-header{
+  .app-container .app-header {
     background-color: #fff;
     color: #333;
     transition: background-color 0.3s ease;
@@ -291,14 +300,143 @@ body.light-mode {
 }
 body.dark-mode {
   .app-container .app-wrapper,
-  .app-container .app-header{
-    background-color: #1a1919;
+  .app-container .app-header,
+  .ant-menu,
+  textarea.ant-input,
+  .ant-drawer-content,
+  .ant-drawer-header,
+  .ant-timeline-item-head,
+  .ant-dropdown-menu,
+  .ant-anchor-wrapper,
+  .search-input,
+  .drawer-btn {
+    background-color: #1a1919 !important;
     color: #999;
+    box-shadow: rgb(30, 32, 32) 0px 2px 8px;
   }
-  span,p,.svg-icon{
-    color: rgb(195, 185, 169)!important;
+  span,
+  p,
+  .svg-icon,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  a,
+  input,
+  .app-container .app-sidebar {
+    color: rgb(195, 185, 169) !important;
   }
-  .title{
-    color: rgb(179, 196, 207)!important;
+  .title,
+  .ant-divider-inner-text,
+  .post-header .post-title {
+    color: rgb(179, 196, 207) !important;
+  }
+  .app-container .app-sidebar .tag-list a,
+  .app-home .app-home-list-item .list-item-others a,
+  .article-desc .ant-tag a,
+  .ant-tag a,
+  .ant-dropdown-menu-item {
+    color: #666 !important;
+  }
+  .app-home .app-home-list-item .list-item-others .ant-tag-has-color a,
+  .article-desc .ant-tag-has-color a,
+  .ant-btn-primary span {
+    color: #eee !important;
+  }
+  // 边框线条
+  .app-home .app-home-list-item,
+  .app-container .app-sidebar,
+  .app-container .app-header .header-right #search-box,
+  .ant-divider-horizontal.ant-divider-with-text-center::before,
+  .ant-divider-horizontal.ant-divider-with-text-left::before,
+  .ant-divider-horizontal.ant-divider-with-text-right::before,
+  .ant-divider-horizontal.ant-divider-with-text-center::after,
+  .ant-divider-horizontal.ant-divider-with-text-left::after,
+  .ant-divider-horizontal.ant-divider-with-text-right::after,
+  .app-article .post-header,
+  .article-detail h2,
+  .article-detail h3,
+  .article-detail h4,
+  .article-detail h5,
+  .article-detail h6,
+  .ant-input,
+  .ant-drawer-header,
+  .ant-timeline-item-tail
+ {
+    border-color: rgb(54, 57, 57);
+  }
+  .app-container .app-header .header-left .search-input{
+    border-bottom: 1px solid  rgb(54, 57, 57);
+  }
+  .discuss-header .ant-divider,
+  .article-desc .ant-divider {
+    background-color: rgb(54, 57, 57);
+  }
+  .article-detail blockquote {
+    border-left-color: rgb(60, 62, 63);
+    color: rgb(195, 185, 169) !important;
+  }
+  // 鼠标触摸颜色
+  .app-home .preview li:hover,
+  .article-list li:hover ,
+  .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover{
+    background-image: initial;
+    background-color: rgb(29, 31, 31) !important;
+    a {
+      color: rgb(92, 186, 252) !important;
+    }
+  }
+  .app-home .app-home-list-item:hover
+  {
+    background-image: initial;
+    background-color: rgb(1, 41, 55);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 30px 0px;
+  }
+  // 代码块背景色
+  .article-detail pre {
+    code {
+      color: rgb(202, 192, 175);
+    }
+    background-image: initial;
+    background-color: rgb(27, 28, 28);
+    .hljs-doctag,
+    .hljs-keyword,
+    .hljs-formula {
+      color: rgb(227, 112, 216) !important;
+    }
+    .hljs-string,
+    .hljs-regexp,
+    .hljs-addition,
+    .hljs-attribute,
+    .hljs-meta-string {
+      color: rgb(127, 191, 116) !important;
+    }
+    .hljs-built_in,
+    .hljs-class .hljs-title {
+      color: rgb(255, 211, 87) !important;
+    }
+    .hljs-attr,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-type,
+    .hljs-selector-class,
+    .hljs-selector-attr,
+    .hljs-selector-pseudo,
+    .hljs-number {
+      color: rgb(255, 221, 115) !important;
+    }
+  }
+  // 分类计数器颜色
+  .ant-badge-count{
+    background-image: initial;
+    background-color: rgb(173, 12, 18);
+    box-shadow: rgb(21, 22, 22) 0px 0px 0px 1px;
+    color: rgb(255, 250, 237);
+  }
+  .ant-rate-star-full div{
+    color: #fadb14!important;
   }
 }

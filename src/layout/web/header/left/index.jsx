@@ -6,6 +6,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 // import config
 import { HEADER_BLOG_NAME } from '@/config'
 import navList from '../right/navList'
+import Setting from '../right/Setting'
 
 // icon
 import SvgIcon from '@/components/SvgIcon'
@@ -60,6 +61,7 @@ const HeaderLeft = props => {
     <div className='header-left'>
       <SvgIcon type='iconblog' style={{ color: '#055796', width: 27, height: 27, transform: 'translateY(2px)' }} />
       <span className='blog-name'>{HEADER_BLOG_NAME}</span>
+      <Setting style={{display: 'none'}}/>
       <Dropdown
         overlayClassName='header-dropdown'
         trigger={['click']}
