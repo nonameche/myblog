@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MenuOutlined, SearchOutlined, HomeOutlined, FolderOutlined, UserOutlined, EditOutlined, AppstoreOutlined } from '@ant-design/icons'
+import { MenuOutlined, SearchOutlined, HomeOutlined, FolderOutlined, UserOutlined, EditOutlined, AppstoreOutlined, SendOutlined } from '@ant-design/icons'
 import { Dropdown, Menu, Input, message } from 'antd'
 import { Link } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
@@ -17,7 +17,7 @@ const Icons = {
   folder: FolderOutlined,
   user: UserOutlined,
   app: AppstoreOutlined,
-
+  navigation: SendOutlined
 }
 function getIcon(icon) {
   const Icon = Icons[icon] || HomeOutlined

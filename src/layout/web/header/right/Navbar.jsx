@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import navList from './navList'
 
 import { Link, useLocation } from 'react-router-dom'
-import { AppstoreOutlined, HomeOutlined, EditOutlined, FolderOutlined, UserOutlined} from '@ant-design/icons'
+import { AppstoreOutlined, HomeOutlined, EditOutlined, FolderOutlined, UserOutlined, SendOutlined} from '@ant-design/icons'
 
 import { Menu } from 'antd'
 
@@ -13,6 +13,7 @@ const Icons = {
   app: AppstoreOutlined,
   folder: FolderOutlined,
   user: UserOutlined,
+  navigation: SendOutlined
 }
 
 function getIcon(icon) {
