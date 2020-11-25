@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
-import { Icon as LegacyIcon } from '@ant-design/compatible'
+import { HomeOutlined, EditOutlined, FolderOutlined, UserOutlined, SwitcherOutlined} from '@ant-design/icons'
 import { Menu } from 'antd'
 import menu from './menu'
 const SubMenu = Menu.SubMenu
+const Icons = {
+  home: HomeOutlined,
+  edit: EditOutlined,
+  folder: FolderOutlined,
+  user: UserOutlined,
+  acticle: SwitcherOutlined,
+}
+
+function getIcon(icon) {
+  const Icon = Icons[icon] || HomeOutlined
+  return <Icon />
+}
 
 function getMenuOpenKeys(menu) {
   const list = []
@@ -32,7 +44,7 @@ function AdminSidebar(props) {
             key={item.path}
             title={
               <span>
-                {item.icon && <LegacyIcon type={item.icon} />}
+                {item.icon && getIcon(item.icon)}
                 <span>{item.name}</span>
               </span>
             }>
@@ -41,9 +53,9 @@ function AdminSidebar(props) {
         )
       } else {
         return item.name && (
-          <Menu.Item key={item.path}>
+          <Menu.Item key={item.path} icon={item.icon && getIcon(item.icon)}>
             <NavLink to={item.path}>
-              {item.icon && <LegacyIcon type={item.icon} />}
+              {/* {item.icon && <LegacyIcon type={item.icon} />} */}
               <span>{item.name}</span>
             </NavLink>
           </Menu.Item>

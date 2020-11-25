@@ -20,7 +20,7 @@ export default [
     link: '/about'
   },
   {
-    icon: 'edit-o',
+    icon: 'app',
     title: '旁门左道',
     link: '/menu'
   }

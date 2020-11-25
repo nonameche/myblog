@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Icon as LegacyIcon } from '@ant-design/compatible'
-import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
+import { MenuOutlined, SearchOutlined, HomeOutlined, FolderOutlined, UserOutlined, EditOutlined, AppstoreOutlined } from '@ant-design/icons'
 import { Dropdown, Menu, Input, message } from 'antd'
 import { Link } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
@@ -12,6 +11,18 @@ import Setting from '../right/Setting'
 
 // icon
 import SvgIcon from '@/components/SvgIcon'
+const Icons = {
+  home: HomeOutlined,
+  edit: EditOutlined,
+  folder: FolderOutlined,
+  user: UserOutlined,
+  app: AppstoreOutlined,
+
+}
+function getIcon(icon) {
+  const Icon = Icons[icon] || HomeOutlined
+  return <Icon />
+}
 
 const HeaderLeft = props => {
   const [keyword, setKeyword] = useState('')
@@ -38,9 +49,9 @@ const HeaderLeft = props => {
   const menu = (
     <Menu className='header-nav'>
       {navList.map(nav => (
-        <Menu.Item key={nav.link}>
+        <Menu.Item key={nav.link} icon={nav.icon && getIcon(nav.icon)}>
           <Link to={nav.link}>
-            {nav.icon && <LegacyIcon type={nav.icon} style={{ marginRight: 15 }} />}
+            {/* {nav.icon && <LegacyIcon type={nav.icon} style={{ marginRight: 15 }} />} */}
             <span className='nav-text'>{nav.title}</span>
           </Link>
         </Menu.Item>

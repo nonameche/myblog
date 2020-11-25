@@ -6,7 +6,7 @@ const menu = [
   },
   {
     path: '/admin/article',
-    icon: 'switcher',
+    icon: 'acticle',
     name: '文章',
     children: [
       {
