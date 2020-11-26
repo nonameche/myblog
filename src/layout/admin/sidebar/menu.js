@@ -22,6 +22,23 @@ const menu = [
     ]
   },
   {
+    path: '/admin/navigation',
+    icon: 'navigation',
+    name: '网站导航',
+    children: [
+      {
+        path: '/admin/navigation/manager',
+        icon: 'folder',
+        name: '管理'
+      },
+      {
+        path: '/admin/navigation/add',
+        icon: 'edit',
+        name: '新增'
+      }
+    ]
+  },
+  {
     path: '/admin/user',
     icon: 'user',
     name: '用户管理'

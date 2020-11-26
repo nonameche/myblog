@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
-import { HomeOutlined, EditOutlined, FolderOutlined, UserOutlined, SwitcherOutlined} from '@ant-design/icons'
+import { HomeOutlined, EditOutlined, FolderOutlined, UserOutlined, SwitcherOutlined, SendOutlined} from '@ant-design/icons'
 import { Menu } from 'antd'
 import menu from './menu'
 const SubMenu = Menu.SubMenu
@@ -10,6 +10,7 @@ const Icons = {
   folder: FolderOutlined,
   user: UserOutlined,
   acticle: SwitcherOutlined,
+  navigation: SendOutlined
 }
 
 function getIcon(icon) {
