@@ -1,5 +1,5 @@
 {
-    "\n          书签栏\n        ": [
+    "书签栏": [
         {
             "东北大乱炖": [
                 {
@@ -75,7 +75,7 @@
                     "href": "https://cloudconvert.com/chm-to-mobi"
                 },
                 {
-                    "\n                  数据报告\n                ": [
+                    "数据报告": [
                         {
                             "name": "艾瑞数据-数据改变认知 提升企业效能",
                             "href": "http://index.iresearch.com.cn/"
@@ -131,7 +131,7 @@
                     ]
                 },
                 {
-                    "\n                  导航网站\n                ": [
+                    "导航网站": [
                         {
                             "name": "工具导航--野创网旗下工具职业导航网站 | yechuang.top",
                             "href": "http://www.yechuang.top/nav/tools/#shuju"
@@ -141,7 +141,7 @@
                             "href": "http://hao.shejidaren.com/"
                         },
                         {
-                            "\n                      导航网站模板\n                    ": [
+                            "导航网站模板": [
                                 {
                                     "name": "左栏全屏响应式bootstrap模板",
                                     "href": "http://sc.chinaz.com/mobandemo.aspx?downloadid=2016101023977"
@@ -199,7 +199,7 @@
                     "href": "https://apkpure.com/store/apps/details?id=com.findtheway"
                 },
                 {
-                    "\n                  求职面试\n                ": [
+                    "求职面试": [
                         {
                             "name": "【IT题库】笔试练习_C++Java前端笔试面试题_牛客网",
                             "href": "https://www.nowcoder.com/contestRoom?mutiTagIds=665&from=zhihuxxbc"
@@ -289,7 +289,7 @@
                             "href": "http://q.daiyun69.cn/?show=login"
                         },
                         {
-                            "\n                      产品经理\n                    ": [
+                            "产品经理": [
                                 {
                                     "name": "产品研究院",
                                     "href": "https://www.pmtemple.com/"
@@ -311,7 +311,7 @@
                     "href": "http://cl.9f8.site/htm_data/1906/22/3562301.html"
                 },
                 {
-                    "\n                  各种资讯\n                ": [
+                    "各种资讯": [
                         {
                             "name": "wikiHow - 您可以编辑的指导手册",
                             "href": "http://zh.wikihow.com/%E9%A6%96%E9%A1%B5"
@@ -323,7 +323,7 @@
                     ]
                 },
                 {
-                    "\n                  资源搜索\n                ": [
+                    "资源搜索": [
                         {
                             "name": "360百度谷歌一起全搜索,baigoogledu,百google度－三百搜(3b搜)",
                             "href": "http://www.3bsou.com/"
@@ -411,7 +411,7 @@
                     ]
                 },
                 {
-                    "\n                  办公助手\n                ": [
+                    "办公助手": [
                         {
                             "name": "Smallpdf.com – 您所有PDF问题的免费解决方案",
                             "href": "https://smallpdf.com/cn"
@@ -499,7 +499,7 @@
                     ]
                 },
                 {
-                    "\n                  软件大全\n                ": [
+                    "软件大全": [
                         {
                             "name": "正版中国 | 正版软件限时免费",
                             "href": "https://getitfree.cn/"
@@ -555,7 +555,7 @@
         {
             "天天要充电": [
                 {
-                    "\n                  前端题目\n                ": [
+                    "前端题目": [
                         {
                             "name": "2018最新Web前端经典面试试题及答案-史上最全前端面试题(含答案)\n                      - xm1037782843的博客 - CSDN博客",
                             "href": "https://blog.csdn.net/xm1037782843/article/details/80708533"
@@ -591,7 +591,7 @@
                     ]
                 },
                 {
-                    "\n                  编程文档\n                ": [
+                    "编程文档": [
                         {
                             "name": "Typescript 3.1 · TypeScript中文网 ·\n                      TypeScript——JavaScript的超集",
                             "href": "https://www.tslang.cn/docs/release-notes/typescript-3.1.html"
@@ -763,7 +763,7 @@
                     ]
                 },
                 {
-                    "\n                  代码规范\n                ": [
+                    "代码规范": [
                         {
                             "name": "编码规范 by @mdo",
                             "href": "https://codeguide.bootcss.com/"
@@ -791,7 +791,7 @@
                     ]
                 },
                 {
-                    "\n                  在线课程\n                ": [
+                    "在线课程": [
                         {
                             "name": "优达学城 (Udacity)中国官网 - 传授硅谷的名企官方课程",
                             "href": "https://cn.udacity.com/"
@@ -859,7 +859,7 @@
                     ]
                 },
                 {
-                    "\n                  大厂博客\n                ": [
+                    "大厂博客": [
                         {
                             "name": "AlloyTeam|腾讯全端 AlloyTeam 团队",
                             "href": "http://www.alloyteam.com/"
@@ -903,7 +903,7 @@
                     ]
                 },
                 {
-                    "\n                  大牛博客\n                ": [
+                    "大牛博客": [
                         {
                             "name": "CSS相关 « 张鑫旭-鑫空间-鑫生活",
                             "href": "https://www.zhangxinxu.com/wordpress/category/css/"
@@ -951,7 +951,7 @@
                     ]
                 },
                 {
-                    "\n                  论坛社区\n                ": [
+                    "论坛社区": [
                         {
                             "name": "CSDN-专业IT技术社区",
                             "href": "https://www.csdn.net/"
@@ -1035,7 +1035,7 @@
                     ]
                 },
                 {
-                    "\n                  前端导航\n                ": [
+                    "前端导航": [
                         {
                             "name": "印记中文 - 深入挖掘国外前端新领域，为中国 Web\n                      前端开发人员提供优质文档！",
                             "href": "https://www.docschina.org/"
@@ -1051,7 +1051,7 @@
                     ]
                 },
                 {
-                    "\n                  编程书籍\n                ": [
+                    "编程书籍": [
                         {
                             "name": "目录 | free-programming-books",
                             "href": "https://ebookfoundation.github.io/free-programming-books/free-programming-books-zh.html#javascript"
@@ -1227,7 +1227,7 @@
                     ]
                 },
                 {
-                    "\n                  接口管理\n                ": [
+                    "接口管理": [
                         {
                             "name": "fastmock在线接口Mock平台",
                             "href": "https://www.fastmock.site/#/projects"
@@ -1267,7 +1267,7 @@
                     ]
                 },
                 {
-                    "\n                  免费接码平台\n                ": [
+                    "免费接码平台": [
                         {
                             "name": "隐私短信 - 免费短信验证码在线接收平台",
                             "href": "https://www.yinsiduanxin.com/"
@@ -1283,9 +1283,9 @@
                     ]
                 },
                 {
-                    "\n                  常用插件框架\n                ": [
+                    "常用插件框架": [
                         {
-                            "\n                      动画库\n                    ": [
+                            "动画库": [
                                 {
                                     "name": "Animate.css",
                                     "href": "https://daneden.github.io/animate.css/"
@@ -1317,7 +1317,7 @@
                             ]
                         },
                         {
-                            "\n                      第三方API\n                    ": [
+                            "第三方API": [
                                 {
                                     "name": "路径规划-出行相关-开发指南-URI API | 高德地图API",
                                     "href": "https://lbs.amap.com/api/uri-api/guide/travel/route/?sug_index=0"
@@ -1329,7 +1329,7 @@
                             ]
                         },
                         {
-                            "\n                      组件库\n                    ": [
+                            "组件库": [
                                 {
                                     "name": "Swiper中文网",
                                     "href": "https://www.swiper.com.cn/"
@@ -1445,7 +1445,7 @@
                             ]
                         },
                         {
-                            "\n                      开发框架\n                    ": [
+                            "开发框架": [
                                 {
                                     "name": "Vue.js",
                                     "href": "https://cn.vuejs.org/"
@@ -1485,7 +1485,7 @@
                             ]
                         },
                         {
-                            "\n                      可视化\n                    ": [
+                            "可视化": [
                                 {
                                     "name": "图扑软件 - 构建先进2D和3D可视化所需要的一切",
                                     "href": "http://www.hightopo.com/cn-index.html"
@@ -1509,7 +1509,7 @@
                             ]
                         },
                         {
-                            "\n                      js库\n                    ": [
+                            "js库": [
                                 {
                                     "name": "SeaJS - A Module Loader for the Web",
                                     "href": "https://www.zhangxinxu.com/sp/seajs/"
@@ -1533,7 +1533,7 @@
                             ]
                         },
                         {
-                            "\n                      其他\n                    ": [
+                            "其他": [
                                 {
                                     "name": "select2/select2: Select2 is a jQuery based\n                          replacement for select boxes. It supports searching,\n                          remote data sets, and infinite scrolling of\n                          results.",
                                     "href": "https://github.com/select2/select2"
@@ -1567,7 +1567,7 @@
                     ]
                 },
                 {
-                    "\n                  开发辅助工具\n                ": [
+                    "开发辅助工具": [
                         {
                             "name": "Shields.io: Quality metadata badges for open source\n                      projects",
                             "href": "https://shields.io/"
@@ -1795,7 +1795,7 @@
                     "href": "https://sos.lanhuapp.com/lan-hu-xiang-xi-jiao-cheng.html#22-%E7%BC%96%E8%BE%91%E5%88%86%E7%BB%84"
                 },
                 {
-                    "\n                  23d可视化\n                ": []
+                    "23d可视化": []
                 },
                 {
                     "name": "AlloyDesigner——For Fast Web Development",
@@ -1838,9 +1838,9 @@
                     "href": "http://v1.chaoxing.com/backSchool/pageSet"
                 },
                 {
-                    "\n                  产品地址\n                ": [
+                    "产品地址": [
                         {
-                            "\n                      测试环境\n                    ": [
+                            "测试环境": [
                                 {
                                     "name": "票务预订",
                                     "href": "http://file.museum.chaoxing.com/frontendTest/ticketTest/index.html#/"
@@ -1904,7 +1904,7 @@
                             ]
                         },
                         {
-                            "\n                      生产环境\n                    ": [
+                            "生产环境": [
                                 {
                                     "name": "达川区博物馆书画特色库",
                                     "href": "http://shuhua.museum.chaoxing.com/"
@@ -2016,7 +2016,7 @@
                             ]
                         },
                         {
-                            "\n                      参考demo\n                    ": [
+                            "参考demo": [
                                 {
                                     "name": "https://gpcclouds.chaoxing.com",
                                     "href": "https://gpcclouds.chaoxing.com/"
@@ -2028,7 +2028,7 @@
                             ]
                         },
                         {
-                            "\n                      后台\n                    ": [
+                            "后台": [
                                 {
                                     "name": "顺德后台系统(测试)",
                                     "href": "http://120.92.71.241/shunde-backend/#/login"
@@ -2048,7 +2048,7 @@
                             ]
                         },
                         {
-                            "\n                      接口文档\n                    ": []
+                            "接口文档": []
                         }
                     ]
                 },
@@ -2157,7 +2157,7 @@
         {
             "机器猫口袋": [
                 {
-                    "\n                  产品运营\n                ": []
+                    "产品运营": []
                 },
                 {
                     "新闻资讯 |": [
@@ -7118,7 +7118,7 @@
                             ]
                         },
                         {
-                            "\n                      心理学 · 博主\n                    ": [
+                            "心理学 · 博主": [
                                 {
                                     "name": "知心者联盟",
                                     "href": "https://space.bilibili.com/390371228/video"
@@ -7650,10 +7650,10 @@
                 {
                     "社会科学": [
                         {
-                            "\n                      政治学\n                    ": []
+                            "政治学": []
                         },
                         {
-                            "\n                      政治学 · 博主\n                    ": []
+                            "政治学 · 博主": []
                         },
                         {
                             "name": "───────────",
@@ -7724,7 +7724,7 @@
                             ]
                         },
                         {
-                            "\n                      经济学 · 博主\n                    ": [
+                            "经济学 · 博主": [
                                 {
                                     "name": "────经济博主────",
                                     "href": "https://separator.mayastudios.com/index.php?t=horz"
@@ -8188,7 +8188,7 @@
                             ]
                         },
                         {
-                            "\n                      历史学 · 博主\n                    ": [
+                            "历史学 · 博主": [
                                 {
                                     "name": "老梁",
                                     "href": "https://www.youtube.com/channel/UCr_F4Y9iboUKlg_ZPm4jkVQ/videos"
@@ -8320,7 +8320,7 @@
                             ]
                         },
                         {
-                            "\n                      地理学 · 博主\n                    ": [
+                            "地理学 · 博主": [
                                 {
                                     "name": "Geography Now",
                                     "href": "https://www.youtube.com/c/GeographyNow/videos"
@@ -9428,7 +9428,7 @@
                             ]
                         },
                         {
-                            "\n                      物理学 · 博主\n                    ": [
+                            "物理学 · 博主": [
                                 {
                                     "name": "科技袁人",
                                     "href": "https://www.youtube.com/channel/UCSgGqt-30oXBq0-n0K-t4Nw/videos"
@@ -9640,7 +9640,7 @@
                             ]
                         },
                         {
-                            "\n                      生物学 · 博主\n                    ": [
+                            "生物学 · 博主": [
                                 {
                                     "name": "BBC Earth",
                                     "href": "https://www.youtube.com/c/bbcearth/videos"
@@ -9820,7 +9820,7 @@
                             ]
                         },
                         {
-                            "\n                      天文学 · 博主\n                    ": [
+                            "天文学 · 博主": [
                                 {
                                     "name": "NASA - YouTube",
                                     "href": "https://www.youtube.com/c/NASA/videos#1"
@@ -9916,7 +9916,7 @@
                             ]
                         },
                         {
-                            "\n                      科技数码 · 博主\n                    ": [
+                            "科技数码 · 博主": [
                                 {
                                     "name": "TESTV",
                                     "href": "https://space.bilibili.com/11336264/video"
@@ -11520,7 +11520,7 @@
                             ]
                         },
                         {
-                            "\n                      Firefox 开发\n                    ": [
+                            "Firefox 开发": [
                                 {
                                     "name": "──────开发资源──────",
                                     "href": "https://separator.mayastudios.com/index.php?t=horz"
@@ -15328,7 +15328,7 @@
                             "href": "https://separator.mayastudios.com/index.php?t=horz"
                         },
                         {
-                            "\n                      视频制作 · 博主\n                    ": [
+                            "视频制作 · 博主": [
                                 {
                                     "name": "Brandon Li",
                                     "href": "https://www.youtube.com/channel/UC3stPIuUoCDHG7COfwr0tEA/videos"

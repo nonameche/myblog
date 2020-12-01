@@ -64,7 +64,7 @@ function parse(html) {
       return $a.length > 0 ? {'name': $a.text(), 'href': $a.attr('href')} : null
     }
 
-    var h3 = $h3.text()
+    var h3 = $h3.text().trim()
     var arr = []
     var obj = {}
 
