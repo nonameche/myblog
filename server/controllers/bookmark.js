@@ -5,6 +5,7 @@ const cheerio = require('cheerio')
 
 const { bookmark: BookmarkModel } = require('../models')
 const fs = require('fs')
+const fsPromises = fs.promises
 const { uploadPath, outputPath, findOrCreateFilePath, decodeFile, generateFile } = require('../utils/file')
 const { join } = require('path')
 
@@ -82,9 +83,9 @@ function parse(html) {
     obj[h3] = arr
 
     // 返回该对象
-    console.log('foo -> obj', obj)
     return obj
   }
+  return s
 }
 
 class BookmarkController {
@@ -150,15 +151,20 @@ class BookmarkController {
   // 解析书签列表
   static async parseBookmarks(ctx) {
     const file = ctx.request.files.file
-    fs.readFile(file.path, function(err, data) {
-      if (err) {
-        console.log('error')
-      } else {
-        const result = parse(data)
-        console.log('BookmarkController -> parseBookmarks -> data', data)
-        console.log('BookmarkController -> parseBookmarks -> result', result)
-      }
-    })
+
+    function getBookmarks() {
+      return new Promise((resolve, reject) => {
+        const bookMarks = {}
+        fs.readFile(file.path, function(err, data) {
+          if (err) return reject(err)
+          const result = parse(data)
+          // console.log('BookmarkController -> parseBookmarks -> result', {result: result})
+          return resolve(result)
+        })
+      })
+    }
+    const results = await getBookmarks()
+    ctx.response.body = results
   }
 }
 module.exports = BookmarkController
