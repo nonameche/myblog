@@ -223,7 +223,7 @@ const config = {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'guodadablog@163.com', // generated ethereal user
+        user: 'xxxxxx@163.com', // generated ethereal user
         pass: '123456', // generated ethereal password 授权码 而非 密码
       },
     },
@@ -280,10 +280,10 @@ if (!devMode) {
 
   // config.EMAIL_NOTICE.enable = true
   config.EMAIL_NOTICE.transporterConfig.auth = {
-    user: 'guodadablog@163.com', // generated ethereal user
+    user: 'xxxxxx.xxx', // generated ethereal user
     pass: '123456XXX', // generated ethereal password 授权码 而非 密码
   }
-  config.EMAIL_NOTICE.WEB_HOST = 'https://guodada.fun'
+  config.EMAIL_NOTICE.WEB_HOST = 'https://xxx.xxx'
 }
 
 module.exports = config
@@ -344,7 +344,5 @@ tags:
 - 标签：`Javascript` `ES6`
 
 如果导入标题一样的文件，可以确认是否覆盖原来的文章！
-
-由于太多小伙伴私聊 QQ，故本人建了个群方便交流技术答疑源码，无商业用途，感兴趣的伙伴可以加群 855655742。请勿广告，谢谢。
 
 PS : 觉得不错的伙伴可以给个 star ~~~ 或者 fork 下来看看哦。如果有什么建议，也可以提 issue 哦
