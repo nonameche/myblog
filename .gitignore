@@ -28,4 +28,5 @@ yarn-error.log*
 /.history
 
 /server/config
-/.github
+# /.github
+build/
