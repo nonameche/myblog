@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Form } from '@ant-design/compatible'
+import { Table, Input, Tag, Button, Popconfirm, Select, DatePicker } from 'antd'
+import {Switch} from 'antd/lib/switch'
 import '@ant-design/compatible/assets/index.css'
-import { Table, Input, Tag, Switch, Button, Popconfirm, Select, DatePicker } from 'antd'
 
 import axios from '@/utils/axios'
 import dayjs from '@/utils/dayjs'
