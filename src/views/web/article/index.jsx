@@ -55,6 +55,7 @@ function Article(props) {
   }
 
   const { title, content, tags, categories, comments, createdAt, viewCount } = article
+  document.title = title
   const articleId = parseInt(props.match.params.id)
   const isFoldNavigation = useMediaQuery({ query: '(max-width: 1300px)' })
   return (

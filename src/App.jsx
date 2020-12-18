@@ -32,13 +32,23 @@ const App = props => {
         children.push(
           <Route
             key={newContextPath}
-            render={props => <item.component {...props}>{childRoutes}</item.component>}
+            render={props => {
+              return <item.component {...props}>{childRoutes}</item.component>
+            }}
             path={newContextPath}
           />
         )
         item.childRoutes.forEach(r => renderRoute(r, newContextPath))
       } else {
-        children.push(<Route key={newContextPath} component={item.component} path={newContextPath} exact />)
+        children.push(<Route
+          key={newContextPath}
+          path={newContextPath}
+          render={props => {
+            console.log(item)
+            document.title = item.title || '我的文章记录'
+            return <item.component {...props}></item.component>
+          }}
+          exact />)
       }
     }
 
