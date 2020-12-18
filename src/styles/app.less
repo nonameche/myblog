@@ -122,6 +122,11 @@
       width: 132px;
       height: 132px;
       border-radius: 50%;
+
+      &:hover{
+        animation: jello; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+      }
     }
     .title {
       font-size: 1.5em;
