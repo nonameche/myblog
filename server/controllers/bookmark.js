@@ -165,6 +165,40 @@ class BookmarkController {
     }
     const results = await getBookmarks()
     ctx.response.body = results
+    // console.log('-------------', JSON.parse(results)['书签栏'])
+    const bookmarks = JSON.parse(results)['书签栏']
+    bookmarks.forEach(item => {
+      // console.log('BookmarkController -> parseBookmarks -> item', item)
+      parseObj(item)
+    })
+    function parseObj(obj) {
+      const titles = Object.keys(obj)
+      const children = Object.values(obj)
+
+      console.log('BookmarkController -> parseObj -> children', children)
+      // 获取分组名称
+      titles.forEach(item => {
+        console.log('BookmarkController -> parseObj -> title', item)
+        // 如果是文件夹，传入文件夹名称
+        BookmarkModel.create({
+          name: item,
+          parent_id: -1,
+          is_bookmark: false
+        })
+      })
+      // 获取分组内容
+      children.forEach(item => {
+        console.log('BookmarkController -> parseObj -> item', item)
+        // parseObj(item)
+        // console.log('BookmarkController -> parseObj -> item', Object.keys(item).length)
+        // // 如果是文件夹，传入文件夹名称
+        // BookmarkModel.create({
+        //   name: item,
+        //   parent_id: -1,
+        //   is_bookmark: false
+        // })
+      })
+    }
   }
 }
 module.exports = BookmarkController
