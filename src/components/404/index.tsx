@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Result, Button } from 'antd'
 
-function PageNotFound(props) {
+function PageNotFound(props: { history: string[] }) {
   return (
     <Result
       status='404'

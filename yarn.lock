@@ -1832,7 +1832,7 @@
   "resolved" "https://registry.npm.taobao.org/antd-dayjs-webpack-plugin/download/antd-dayjs-webpack-plugin-1.0.1.tgz?cache=0&sync_timestamp=1596166605329&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd-dayjs-webpack-plugin%2Fdownload%2Fantd-dayjs-webpack-plugin-1.0.1.tgz"
   "version" "1.0.1"
 
-"antd@^4.8.5", "antd@>=3.0.0":
+"antd@^4.8.5":
   "integrity" "sha1-6wr4FUpt/7BwwBazRNS0m2kQzk8="
   "resolved" "https://registry.npm.taobao.org/antd/download/antd-4.8.5.tgz?cache=0&sync_timestamp=1606041599655&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-4.8.5.tgz"
   "version" "4.8.5"
@@ -8887,7 +8887,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.3"
 
-"prop-types@^15.0", "prop-types@^15.5.10", "prop-types@^15.5.8", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@15.x":
+"prop-types@^15.5.10", "prop-types@^15.5.8", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@15.x":
   "integrity" "sha1-UsQedbjIfnK52TYOAga5ncv/psU="
   "resolved" "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9599,7 +9599,7 @@
     "strip-ansi" "5.2.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^0.14.0 || ^15.0.0-rc || ^16.0.0-rc || ^16.0.0", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^16.9.0", "react-dom@>=15.0.0", "react-dom@>=15.x", "react-dom@>=16.0.0", "react-dom@>=16.9.0":
+"react-dom@^16.9.0":
   "integrity" "sha1-DaS3FLjRPCA4yTlrVKkrrqYz/hE="
   "resolved" "https://registry.npm.taobao.org/react-dom/download/react-dom-16.12.0.tgz?cache=0&sync_timestamp=1573775844336&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.12.0.tgz"
   "version" "16.12.0"
@@ -9697,7 +9697,7 @@
     "@types/codemirror" "^0.0.76"
     "easymde" "^2.7.1-202.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0-rc || ^16.0.0-rc || ^16.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.9.0", "react@>= 16.9.0", "react@>=15.0.0", "react@>=15.x", "react@>=16.0.0", "react@>=16.9.0":
+"react@^16.9.0":
   "integrity" "sha1-DAqcahQkKeNhSDTVp3jhiqeKC4M="
   "resolved" "https://registry.npm.taobao.org/react/download/react-16.12.0.tgz"
   "version" "16.12.0"

@@ -8,14 +8,14 @@ import routes from '@/routes'
 // components
 import PublicComponent from '@/components/Public'
 
-const App = props => {
-  const role = useSelector(state => state.user.role) // 相当于 connect(state => state.user.role)(App)
+const App = (props: any) => {
+  const role = useSelector((state:any) => state.user.role) // 相当于 connect(state => state.user.role)(App)
 
   // 解构 route
-  function renderRoutes(routes, contextPath) {
-    const children = []
+  function renderRoutes(routes: any[], contextPath: string) {
+    const children:any[] = []
 
-    const renderRoute = (item, routeContextPath) => {
+    const renderRoute = (item: any, routeContextPath: string) => {
       let newContextPath = item.path ? `${routeContextPath}/${item.path}` : routeContextPath
       newContextPath = newContextPath.replace(/\/+/g, '/')
       if (newContextPath.includes('admin') && role !== 1) {
@@ -38,7 +38,7 @@ const App = props => {
             path={newContextPath}
           />
         )
-        item.childRoutes.forEach(r => renderRoute(r, newContextPath))
+        item.childRoutes.forEach((r: any) => renderRoute(r, newContextPath))
       } else {
         children.push(<Route
           key={newContextPath}
