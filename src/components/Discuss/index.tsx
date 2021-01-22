@@ -21,6 +21,10 @@ import AppAvatar from '@/components/Avatar'
 
 import useBus from '@/hooks/useBus'
 
+export interface IRootState {
+  user: object;
+}
+
 const { TextArea } = Input
 
 const Editor = ({ onChange, onSubmit, submitting, value, articleId }) => (
@@ -43,7 +47,7 @@ const Editor = ({ onChange, onSubmit, submitting, value, articleId }) => (
 function Discuss(props) {
   const dispatch = useDispatch()
   const bus = useBus()
-  const userInfo = useSelector(state => state.user)
+  const userInfo = useSelector((state:IRootState) => state.user)
   const { username, role } = userInfo
 
   const { commentList, articleId } = props

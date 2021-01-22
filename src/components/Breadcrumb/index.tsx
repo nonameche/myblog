@@ -5,9 +5,15 @@ import { Breadcrumb } from 'antd'
 
 import { useListener } from '@/hooks/useBus'
 
+interface itemType {
+  link: string
+  name: string
+  goBack: boolean
+}
+
 /**
  * 面包屑
-*/
+ */
 function PvBreadcurmb(props) {
   const history = useHistory()
   const [list, setList] = useState([])
@@ -24,9 +30,15 @@ function PvBreadcurmb(props) {
 
   return (
     <Breadcrumb style={{ margin: '16px 0' }}>
-      {breadcrumbList.map((item, index) => (
+      {breadcrumbList.map((item: itemType, index: number) => (
         <Breadcrumb.Item key={index}>
-          {typeof item === 'string' ? item : <Link to={item.link || '/'} onClick={e => handleClick(e, item.goBack)}>{item.name}</Link>}
+          {typeof item === 'string' ? (
+            item
+          ) : (
+            <Link to={item.link || '/'} onClick={e => handleClick(e, item.goBack)}>
+              {item.name}
+            </Link>
+          )}
         </Breadcrumb.Item>
       ))}
     </Breadcrumb>
