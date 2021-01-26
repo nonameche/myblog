@@ -38,7 +38,7 @@ function CommentItem(props) {
         content: value.trim(),
         commentId
       })
-      .then(res => {
+      .then((res:any) => {
         props.onReply({ commentId: 0, replyId: 0 })
         props.setCommentList(res.rows)
       })
@@ -110,7 +110,7 @@ function CommentItem(props) {
 }
 
 const CommentList = props => {
-  const userInfo = useSelector(state => state.user)
+  const userInfo = useSelector((state:any) => state.user)
   const { commentList, articleId } = props
   const [replyTarget, setReplyTarget] = useState({ commentId: 0, replyId: 0 })
 

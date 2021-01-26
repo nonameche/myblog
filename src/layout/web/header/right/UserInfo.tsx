@@ -11,11 +11,19 @@ import AppAvatar from '@/components/Avatar'
 
 // hooks
 import useBus from '@/hooks/useBus'
+interface State{
+  user:''
+}
+interface UserInfoType{
+  username?:string,
+  github?:string,
+  role?:number
+}
 
 function UserInfo(props) {
   const dispatch = useDispatch()
   const bus = useBus()
-  const userInfo = useSelector(state => state.user)
+  const userInfo:UserInfoType = useSelector<State>(state => state.user)
   const { username, github, role } = userInfo
 
   const MenuOverLay = (
@@ -56,7 +64,7 @@ function UserInfo(props) {
               onClick={e => bus.emit('openSignModal', 'login')}>
               登录
             </Button>
-            <Button ghost type='danger' size='small' onClick={e => bus.emit('openSignModal', 'register')}>
+            <Button ghost type='ghost' size='small' onClick={e => bus.emit('openSignModal', 'register')}>
               注册
             </Button>
           </>

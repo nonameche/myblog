@@ -2,7 +2,7 @@ import React from 'react'
 import Search from './Search'
 import Navbar from './Navbar'
 import UserInfo from './UserInfo'
-import Setting from './Setting'
+import {Setting} from './Setting'
 
 function HeaderRight(props) {
   return (

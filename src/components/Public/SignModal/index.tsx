@@ -32,7 +32,7 @@ function FormItem(props) {
 }
 
 function SignModal(props) {
-  const dispatch = useDispatch() // dispatch hooks
+  const dispatch:any = useDispatch() // dispatch hooks
   const location = useLocation() // location
   const [visible, setVisible] = useState(false)
   const [type, setType] = useState('login')

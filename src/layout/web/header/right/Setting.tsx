@@ -1,8 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, FC} from 'react'
 import useDarkMode from 'use-dark-mode'
 import DarkModeToggle from 'react-dark-mode-toggle'
 
-export default () => {
+interface BaseProps{
+  style?:{}
+}
+
+export const Setting:FC<BaseProps> = () => {
   // const [isDarkMode, setIsDarkMode] = useState(false)
   const darkMode = useDarkMode(false)
 

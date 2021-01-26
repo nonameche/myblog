@@ -11,7 +11,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
  * @param {Function} importComponent - example const xx = asyncComponent(() => import('./xxx'))
  */
 export const asyncComponent = importComponent =>
-  (class AsyncComponent extends Component {
+  (class AsyncComponent extends Component<{}, {component:any}> {
     constructor(props) {
       super(props)
       this.state = { component: null }

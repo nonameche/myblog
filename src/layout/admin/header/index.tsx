@@ -8,12 +8,18 @@ import { DownOutlined } from '@ant-design/icons'
 
 import { Button, Dropdown, Menu, Avatar } from 'antd'
 import logo from '@/assets/images/logo.jpeg'
+interface State {
+  user:{}
+}
 
+interface UserInfo{
+  username?:''
+}
 function AdminHeader(props) {
   const dispatch = useDispatch()
   const history = useHistory()
 
-  const userInfo = useSelector(state => state.user)
+  const userInfo:UserInfo = useSelector<State>(state => state.user)
 
   const menu = (
     <Menu className='menu'>

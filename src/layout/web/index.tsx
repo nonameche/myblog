@@ -22,7 +22,7 @@ const WebLayout = props => {
           <AppMain {...props} />
         </Col>
       </Row>
-      <BackTop target={() => document.querySelector('.app-main')} />
+      <BackTop target={() => document.querySelector('.app-main') as HTMLElement} />
     </Layout>
   )
 }

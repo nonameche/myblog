@@ -10,16 +10,24 @@ import axios from '@/utils/axios'
 // hooks
 import { useListener } from '@/hooks/useBus'
 import useBoolean from '@/hooks/useBoolean'
+import { any } from 'sequelize/types/lib/operators'
+
+// type 定义
+type List = any[]
+interface responseType {
+  insertList:[]
+  updateList:[]
+}
 
 function UploadModal(props) {
   const dispatch = useDispatch() // dispatch hooks
-  const authorId = useSelector(state => state.user.userId)
+  const authorId = useSelector((state:any) => state.user.userId)
   const timer = useRef(null)
 
   const confirmLoading = useBoolean(false)
   const { value: visible, setTrue, setFalse } = useBoolean(false)
   const [fileList, setFileList] = useState([])
-  const [parsedList, setParsedList] = useState([])
+  const [parsedList, setParsedList] = useState<List>([])
 
   const columns = [
     {
@@ -69,8 +77,8 @@ function UploadModal(props) {
       clearTimeout(timer.current)
       timer.current = setTimeout(() => {
         const fileNameList = fileList.map(item => item.name)
-        axios.post('/article/checkExist', { fileNameList }).then(list => {
-          setParsedList(list)
+        axios.post<List>('/article/checkExist', { fileNameList }).then(list => {
+          // setParsedList(list)
         })
       }, 500)
     }
@@ -91,7 +99,7 @@ function UploadModal(props) {
       setFalse()
       notification.success({
         message: 'upload article success',
-        description: `insert ${response.insertList.length} article and update ${response.updateList.length} article`
+        description: `insert ${response.data.insertList.length} article and update ${response.data.updateList.length} article`
       })
     }).catch(error => {
       console.log('error: ', error)

@@ -22,7 +22,11 @@ import AppAvatar from '@/components/Avatar'
 import useBus from '@/hooks/useBus'
 
 export interface IRootState {
-  user: object;
+  user: {
+    username:string,
+    role:number,
+    userId:number
+  };
 }
 
 const { TextArea } = Input
@@ -94,7 +98,7 @@ function Discuss(props) {
 
     withLoading(
       axios.post('/discuss', { articleId: props.articleId, content: value, userId: userInfo.userId })
-    ).then(res => {
+    ).then((res:any) => {
       setValue('')
       props.setCommentList(res.rows)
     })

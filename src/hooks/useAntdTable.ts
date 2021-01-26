@@ -12,7 +12,7 @@ import useMount from './useMount'
 export default function useAntdTable({ requestUrl = '', queryParams = null, columns = [], isAdmin = true }) {
   const [loading, setLoading] = useState(false)
   const [dataList, setDataList] = useState([])
-  const [tablePagination, setTablePagination] = useState({ current: 1, pageSize: 10, totoal: 0 })
+  const [tablePagination, setTablePagination] = useState({ current: 1, pageSize: 10, total: 0 })
 
   useMount(fetchListWithLoading)
 
@@ -28,7 +28,7 @@ export default function useAntdTable({ requestUrl = '', queryParams = null, colu
       .get(requestUrl, { params: requestParams })
       .then(response => {
         const { page, pageSize } = requestParams
-        const { count, rows } = response
+        const { count, rows } = response.data
 
         if (count > 0 && count > pageSize) {
           const totalPage = Math.ceil(count / pageSize)
@@ -57,7 +57,7 @@ export default function useAntdTable({ requestUrl = '', queryParams = null, colu
     try {
       setLoading(true)
       await func()
-      fetchDataList()
+      fetchDataList(null)
     } catch (error) {
       console.log('updateList error: ', error)
       setLoading(false)

@@ -9,9 +9,9 @@ import { login } from '@/redux/user/actions'
 import { get, remove } from '@/utils/storage'
 
 function AppLoading(props) {
-  const dispatch = useDispatch() // dispatch hooks
+  const dispatch:any = useDispatch() // dispatch hooks
 
-  const [loading, setLoading] = useState('')
+  const [loading, setLoading] = useState(false)
 
   function jumpToBefore() {
     const url = get('prevRouter') || '/'
@@ -26,7 +26,7 @@ function AppLoading(props) {
   useEffect(() => {
     let componentWillUnmount = false
     // component did mount
-    const params = decodeQuery(props.location.search)
+    const params:any = decodeQuery(props.location.search)
     if (params.code) {
       // github callback code
       setLoading(true)

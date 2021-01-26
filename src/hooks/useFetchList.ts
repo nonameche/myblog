@@ -28,7 +28,7 @@ export default function useFetchList({
 
   useMount(() => {
     if (fetchDependence.length === 0) {
-      fetchWithLoading()
+      fetchWithLoading(null)
     }
   })
 
@@ -57,11 +57,11 @@ export default function useFetchList({
     axios
       .get(requestUrl, { params: requestParams })
       .then(response => {
-        pagination.total = response.count
+        pagination.total = response.data.count
         pagination.current = parseInt(requestParams.page)
         pagination.pageSize = parseInt(requestParams.pageSize)
         setPagination({ ...pagination })
-        setDataList(response.rows)
+        setDataList(response.data.rows)
         // console.log('%c useFetchList: ', 'background: yellow', requestParams, response)
         withLoading && setLoading(false)
       })

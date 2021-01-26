@@ -307,7 +307,7 @@ module.exports = function (webpackEnv) {
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
         '@': paths.appSrc,
-        '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/utils/antdIcon.js') // antd icon 按需引入
+        // '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/utils/antdIcon.ts') // antd icon 按需引入
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

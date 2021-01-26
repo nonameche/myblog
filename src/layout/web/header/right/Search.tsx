@@ -11,7 +11,7 @@ function SearchButton(props) {
   const [keyword, setKeyword] = useState('')
 
   useMount(() => {
-    const { keyword } = decodeQuery(location.search)
+    const {keyword} = decodeQuery(location.search)
     keyword && setKeyword(keyword)
   })
 

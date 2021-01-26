@@ -21,6 +21,6 @@ export default function useRequestLoading() {
     }
   }
 
-  return [loading, withLoading]
+  return [loading, withLoading] as const
 }
 

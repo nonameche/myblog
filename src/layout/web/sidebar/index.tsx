@@ -14,7 +14,7 @@ import { ANNOUNCEMENT } from '@/config'
 import useFetchList from '@/hooks/useFetchList'
 
 function SideBar(props) {
-  const tagList = useSelector(state => state.article.tagList || [])
+  const tagList = useSelector((state:any) => state.article.tagList || [])
 
   const { dataList: articleList } = useFetchList({
     withLoading: false,
@@ -59,8 +59,8 @@ function SideBar(props) {
           </Tag>
         ))}
       </div>
-      <div class='outer'>
-        <div id='footer-info' class='inner' style={{textAlign: 'center'}}>
+      <div className='outer'>
+        <div id='footer-info' className='inner' style={{textAlign: 'center'}}>
       Copyright&copy; 2020 <br />
           <p>nonameche 保留所有权利</p>
           <a href='https://beian.miit.gov.cn' target='_blank' rel='noopener noreferrer' style={{color: '#000000A6'}}>鲁ICP备19013033号-1</a>

@@ -9,11 +9,13 @@ function MdEditor(props) {
   // useEffect(() => {}, [])
 
   // return <textarea id='simple-editor' style={{ display: 'none' }} />
+  // TODO:暂时隐藏预览渲染
+  // previewRender: translateMarkdown
   return (
     <SimpleMDE
       value={props.value}
       onChange={props.onChange}
-      options={{ autofocus: true, autosave: true, previewRender: translateMarkdown }}
+      options={{ autofocus: true, autosave: {uniqueId: '', enabled: true}}}
     />
   )
 }

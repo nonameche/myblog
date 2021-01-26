@@ -7,7 +7,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 // import config
 import { HEADER_BLOG_NAME } from '@/config'
 import navList from '../right/navList'
-import Setting from '../right/Setting'
+import {Setting} from '../right/Setting'
 
 // icon
 import SvgIcon from '@/components/SvgIcon'
