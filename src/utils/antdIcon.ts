@@ -1,3 +1,4 @@
+export {}
 // // 解决 antd icon 打包不能按需加载的问题
 // // https://github.com/ant-design/ant-design/issues/12011
 

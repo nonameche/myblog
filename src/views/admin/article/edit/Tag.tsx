@@ -45,7 +45,7 @@ function AppTag(props) {
       const tagElem = (
         <CheckableTag
           key={item}
-          closable='true'
+          closable={true}
           onClose={() => removeItem(item)}
           checked={selectedList.includes(item)}
           onChange={checked => handleSelect(item, checked)}

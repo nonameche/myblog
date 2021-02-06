@@ -10,12 +10,13 @@ export const translateMarkdown = (plainText, isGuardXss = false) => {
     gfm: true,
     pedantic: false,
     sanitize: false,
-    tables: true,
+    // tables: true,
     breaks: true,
     smartLists: true,
     smartypants: true,
     highlight: function(code) {
       /*eslint no-undef: "off"*/
+      const hljs = require('highlight.js')
       return hljs.highlightAuto(code).value
     }
   })

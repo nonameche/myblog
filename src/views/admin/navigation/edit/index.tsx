@@ -143,7 +143,7 @@ function Edit(props) {
         }}
       />
 
-      <BackTop target={() => document.querySelector('.admin-content-wrap')} />
+      <BackTop target={():HTMLElement => document.querySelector('.admin-content-wrap') as HTMLElement} />
     </div>
   )
 }
