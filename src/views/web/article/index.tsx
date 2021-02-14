@@ -42,8 +42,8 @@ function Article(props) {
   useEffect(() => {
     withLoading(axios.get(`/article/${props.match.params.id}`))
       .then((res:any) => {
-        res.content = translateMarkdown(res.content)
-        setArticle(res)
+        res.data.content = translateMarkdown(res.data.content)
+        setArticle(res.data)
       })
       .catch(e => {
         props.history.push('/404')

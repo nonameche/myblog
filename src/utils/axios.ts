@@ -43,6 +43,7 @@ service.interceptors.response.use(
         switch (status) {
           case 401:
             message.error((data && data.message) || '登录信息过期或未授权，请重新登录！')
+            console.log('登录过期')
             break
 
           default:
