@@ -15,7 +15,7 @@ function About(props) {
 
   useEffect(() => {
     const fetchList = () => {
-      axios.get('/article/-1').then(article => {
+      axios.get('/article/-1').then((article:any) => {
         setCommentList(article.comments)
       })
     }

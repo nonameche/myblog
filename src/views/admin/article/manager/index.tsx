@@ -17,7 +17,7 @@ import useBreadcrumb from '@/hooks/useBreadcrumb'
 function ArticleManager(props) {
   useBreadcrumb(['文章管理'])
 
-  const { tagList, categoryList } = useSelector(state => ({
+  const { tagList, categoryList } = useSelector((state:any) => ({
     tagList: state.article.tagList,
     categoryList: state.article.categoryList
   }))
@@ -74,7 +74,7 @@ function ArticleManager(props) {
       {
         dataIndex: 'id',
         title: '操作',
-        render: (articleId, record) => {
+        render: (articleId, record:{id:number, title:string}) => {
           return (
             <ul className='action-list'>
               <li>
@@ -103,7 +103,7 @@ function ArticleManager(props) {
     return target && target.color
   }
 
-  function output(articleId) {
+  function output(articleId, title) {
     download(`/article/output/${articleId}`)
   }
 
@@ -117,7 +117,7 @@ function ArticleManager(props) {
 
   function delList() {
     axios.delete(`/article/list/${selectedRowKeys}`).then(() => {
-      onSearch()
+      onSearch(null)
       setSelectedRowKeys([])
     })
   }
@@ -193,7 +193,7 @@ function ArticleManager(props) {
                     okText='Yes'
                     cancelText='No'
                   >
-                    <Button type='danger' size='small' disabled={selectedRowKeys.length === 0}>批量删除</Button>
+                    <Button danger size='small' disabled={selectedRowKeys.length === 0}>批量删除</Button>
                   </Popconfirm>
 
                 </>

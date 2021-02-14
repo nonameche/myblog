@@ -144,7 +144,9 @@ function Discuss(props) {
 }
 
 Discuss.propTypes = {
-  commentList: PropTypes.array.isRequired
+  commentList: PropTypes.array.isRequired,
+  articleId: -1,
+  setCommentList: null
 }
 
 export default Discuss

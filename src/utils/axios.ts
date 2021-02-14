@@ -32,7 +32,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     // Any status code that lie within the range of 2xx cause this function to trigger
-    return response.data
+    return response
   },
   err => {
     // Any status codes that falls outside the range of 2xx cause this function to trigger

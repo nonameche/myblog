@@ -34,14 +34,14 @@ function Article(props) {
   useEffect(() => {
     setTimeout(() => {
       const hash = decodeURI(props.location.hash)
-      const ele = document.querySelector(`a[href="${hash}"]`)
+      const ele:any = document.querySelector(`a[href="${hash}"]`)
       ele && hash && ele.click() // 挂载时路由跳转到指定位置
     }, 800)
   }, [])
 
   useEffect(() => {
     withLoading(axios.get(`/article/${props.match.params.id}`))
-      .then(res => {
+      .then((res:any) => {
         res.content = translateMarkdown(res.content)
         setArticle(res)
       })

@@ -20,7 +20,7 @@ const Home = props => {
     queryParams: { pageSize: HOME_PAGESIZE },
     fetchDependence: [props.location.search]
   })
-
+  console.log(dataList)
   const list = useMemo(() => {
     return [...dataList].map(item => {
       const index = item.content.indexOf('<!--more-->')

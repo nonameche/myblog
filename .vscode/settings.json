@@ -1,3 +1,4 @@
 {
-  "editor.formatOnSave": false // 每次保存的时候自动格式化
+  "editor.formatOnSave": false,
+  "commentTranslate.targetLanguage": "zh-CN" // 每次保存的时候自动格式化
 }
