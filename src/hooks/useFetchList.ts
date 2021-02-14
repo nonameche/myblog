@@ -57,7 +57,7 @@ export default function useFetchList({
     axios
       .get(requestUrl, { params: requestParams })
       .then(response => {
-        console.log('🚀 ~ file: useFetchList.ts ~ line 60 ~ fetchDataList ~ response', response.data)
+        // console.log('🚀 ~ file: useFetchList.ts ~ line 60 ~ fetchDataList ~ response', response.data)
         pagination.total = response.data.count
         pagination.current = parseInt(requestParams.page)
         pagination.pageSize = parseInt(requestParams.pageSize)
