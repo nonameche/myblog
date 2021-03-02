@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import './index.less'
 
 import { ARCHIVES_PAGESIZE } from '@/utils/config'

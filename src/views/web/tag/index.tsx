@@ -1,7 +1,7 @@
-import React, { Component, useEffect, useState } from 'react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React, { } from 'react'
 import './index.less'
 
-import axios from '@/utils/axios'
 import { TAG_PAGESIZE } from '@/utils/config'
 
 import { Link } from 'react-router-dom'

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import marked from 'marked'
 import { COLOR_LIST } from '@/utils/config'
 import xss from 'xss'

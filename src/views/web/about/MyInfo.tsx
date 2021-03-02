@@ -3,7 +3,7 @@ import React from 'react'
 import { QqOutlined } from '@ant-design/icons'
 
 // components
-import { Divider, Rate, Avatar } from 'antd'
+import { Divider, Rate } from 'antd'
 import Href from '@/components/Href'
 import SvgIcon from '@/components/SvgIcon'
 

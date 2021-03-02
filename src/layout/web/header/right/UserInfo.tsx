@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { connect, useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 // methods
 import { loginout } from '@/redux/user/actions'
 
 // components
-import { Button, Dropdown, Menu, Avatar } from 'antd'
+import { Button, Dropdown, Menu } from 'antd'
 import AppAvatar from '@/components/Avatar'
 
 // hooks
@@ -24,22 +24,22 @@ function UserInfo(props) {
   const dispatch = useDispatch()
   const bus = useBus()
   const userInfo:UserInfoType = useSelector<State>(state => state.user)
-  const { username, github, role } = userInfo
+  const { username, role } = userInfo
 
   const MenuOverLay = (
     <Menu>
       {role === 1 && (
         <Menu.Item>
-          <span onClick={e => bus.emit('openUploadModal')}>导入文章</span>
+          <span onClick={() => bus.emit('openUploadModal')}>导入文章</span>
         </Menu.Item>
       )}
       {role === 1 && (
         <Menu.Item>
-          <span onClick={e => props.history.push('/admin')}>后台管理</span>
+          <span onClick={() => props.history.push('/admin')}>后台管理</span>
         </Menu.Item>
       )}
       <Menu.Item>
-        <span className='user-logout' onClick={e => dispatch(loginout())}>
+        <span className='user-logout' onClick={() => dispatch(loginout())}>
           退出登录
         </span>
       </Menu.Item>
@@ -61,10 +61,10 @@ function UserInfo(props) {
               type='primary'
               size='small'
               style={{ marginRight: 20 }}
-              onClick={e => bus.emit('openSignModal', 'login')}>
+              onClick={() => bus.emit('openSignModal', 'login')}>
               登录
             </Button>
-            <Button ghost type='ghost' size='small' onClick={e => bus.emit('openSignModal', 'register')}>
+            <Button ghost type='ghost' size='small' onClick={() => bus.emit('openSignModal', 'register')}>
               注册
             </Button>
           </>

@@ -10,7 +10,7 @@ import { GithubOutlined } from '@ant-design/icons'
 import { Avatar, Popover, Typography } from 'antd'
 import SvgIcon from '@/components/SvgIcon'
 
-const { Text, Title } = Typography
+const { Text } = Typography
 
 function AvatarComponent({ username, github, role }) {
   let avatarSrc = ''

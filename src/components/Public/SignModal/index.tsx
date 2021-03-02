@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { GithubOutlined } from '@ant-design/icons'
 import { Form } from '@ant-design/compatible'
 import '@ant-design/compatible/assets/index.css'
@@ -62,7 +62,7 @@ function SignModal(props) {
   }
 
   // 确认密码
-  function compareToFirstPassword(rule, value, callback) {
+  function compareToFirstPassword(value, callback) {
     const form = props.form
     if (value && value !== form.getFieldValue('password')) {
       callback('Two passwords that you enter is inconsistent!')
@@ -76,7 +76,7 @@ function SignModal(props) {
       width={460}
       title={type}
       visible={visible}
-      onCancel={e => setVisible(false)}
+      onCancel={() => setVisible(false)}
       footer={null}>
       <Form layout='horizontal'>
         {type === 'login' ? (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import { PlusOutlined } from '@ant-design/icons'
 
@@ -13,10 +13,10 @@ function AppTag(props) {
   const { selectedList, setSelectedList } = props
   let inputRef = null
 
-  function removeItem(item) {
-    const newList = list.filter(l => l !== item)
-    setList(newList)
-  }
+  // function removeItem(item) {
+  //   const newList = list.filter(l => l !== item)
+  //   setList(newList)
+  // }
 
   function addItem() {
     if (inputValue && !list.find(d => d === inputValue)) {
@@ -40,7 +40,7 @@ function AppTag(props) {
   }
 
   return <>
-    {list.map((item, index) => {
+    {list.map(item => {
       const isLongTag = item.length > 20
       const tagElem = (
         <CheckableTag

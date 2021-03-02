@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './index.less'
 import { useSelector } from 'react-redux'
 import { Badge, Tag } from 'antd'
 import { Link } from 'react-router-dom'
 
-function Categories(props) {
+function Categories() {
   const categoryList = useSelector((state:any) => state.article.categoryList)
 
   return (
@@ -13,7 +13,7 @@ function Categories(props) {
       <p className='category-all-title'>{`${categoryList.length} categories in total`}</p>
 
       <div className='categories-list'>
-        {categoryList.map((item, i) => (
+        {categoryList.map(item => (
           <Badge count={item.count} key={item.name}>
             <Tag color={item.color}>
               <Link to={`/categories/${item.name}`}>{item.name}</Link>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -8,7 +8,7 @@ import routes from '@/routes'
 // components
 import PublicComponent from '@/components/Public'
 
-const App = (props: any) => {
+const App = () => {
   const role = useSelector((state:any) => state.user.role) // 相当于 connect(state => state.user.role)(App)
 
   // 解构 route

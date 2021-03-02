@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.less'
 import { Avatar } from 'antd'
 
@@ -9,7 +9,7 @@ import Discuss from '@/components/Discuss'
 
 import { useMediaQuery } from 'react-responsive'
 
-function About(props) {
+function About() {
   const [commentList, setCommentList] = useState([])
   const iphoneScreen = useMediaQuery({ query: '(max-width: 576px)' })
 

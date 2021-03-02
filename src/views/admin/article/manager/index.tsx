@@ -1,8 +1,8 @@
-import React, { Component, useState, useEffect } from 'react'
-import { connect, useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Form } from '@ant-design/compatible'
 import '@ant-design/compatible/assets/index.css'
-import { Table, Tag, Switch, message, Input, Button, Popconfirm, Select } from 'antd'
+import { Table, Tag, Switch, Input, Button, Popconfirm, Select } from 'antd'
 
 import axios from '@/utils/axios'
 
@@ -37,7 +37,7 @@ function ArticleManager(props) {
       {
         title: '标签',
         dataIndex: 'tags',
-        render: (text, record) => {
+        render: text => {
           return text.map(d => (
             <Tag color={renderColor(d.name, tagList)} key={d.name}>
               <Link to={`/tags/${d.name}`}>{d.name}</Link>
@@ -48,7 +48,7 @@ function ArticleManager(props) {
       {
         title: '分类',
         dataIndex: 'categories',
-        render: (text, record) => {
+        render: text => {
           return text.map(d => (
             <Tag color='#2db7f5' key={d.name}>
               <Link to={`/categories/${d.name}`}>{d.name}</Link>
@@ -84,10 +84,10 @@ function ArticleManager(props) {
                 <Link to={{ pathname: `/admin/article/edit/${record.id}`, state: { articleId } }}>编辑</Link>
               </li>
               <li>
-                <a onClick={e => output(record.id, record.title)}>导出</a>
+                <a onClick={() => output(record.id)}>导出</a>
               </li>
               <li>
-                <Popconfirm title='Are you sure？' cancelText='No' onConfirm={e => updateList(() => axios.delete(`/article/${articleId}`))}>
+                <Popconfirm title='Are you sure？' cancelText='No' onConfirm={() => updateList(() => axios.delete(`/article/${articleId}`))}>
                   <a className='delete-text'>删除</a>
                 </Popconfirm>
               </li>
@@ -103,7 +103,7 @@ function ArticleManager(props) {
     return target && target.color
   }
 
-  function output(articleId, title) {
+  function output(articleId) {
     download(`/article/output/${articleId}`)
   }
 
@@ -180,7 +180,7 @@ function ArticleManager(props) {
         rowSelection={rowSelection}
         footer={() => (
           <>
-            批量操作 <Switch checked={batch} onChange={e => setBatch(prev => !prev)} style={{ marginRight: 8 }} />
+            批量操作 <Switch checked={batch} onChange={() => setBatch(prev => !prev)} style={{ marginRight: 8 }} />
 
             {
               batch && (

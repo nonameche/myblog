@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useMediaQuery } from 'react-responsive'
@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import { MenuOutlined } from '@ant-design/icons'
 
 // components
-import { Divider, Empty, Drawer, Tag, Spin } from 'antd'
+import { Divider, Drawer } from 'antd'
 
 const title = '快速导航'
 
@@ -35,14 +35,14 @@ const QuickLink = props => {
 
   return isGreaterThan1300 ? <List list={list} /> : (
     <>
-      <div className='drawer-btn' onClick={e => setDrawerVisible(true)}>
+      <div className='drawer-btn' onClick={() => setDrawerVisible(true)}>
         <MenuOutlined className='nav-phone-icon' />
       </div>
       <Drawer
         title={title}
         placement='right'
         closable={false}
-        onClose={e => setDrawerVisible(false)}
+        onClose={() => setDrawerVisible(false)}
         visible={drawerVisible}
         getContainer={() => document.querySelector('.app-home')}>
         <List list={list} showTitle={false} />

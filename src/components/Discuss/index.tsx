@@ -1,8 +1,7 @@
-import React, { Component, Fragment, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './index.less'
 import { useSelector, useDispatch } from 'react-redux'
-import { DISCUSS_AVATAR } from '@/config'
 
 // methods
 import axios from '@/utils/axios'
@@ -11,11 +10,10 @@ import { loginout } from '@/redux/user/actions'
 import useAjaxLoading from '@/hooks/useAjaxLoading'
 
 // components
-import SvgIcon from '@/components/SvgIcon'
 import { DownOutlined, GithubFilled, InfoCircleOutlined } from '@ant-design/icons'
 import { Form } from '@ant-design/compatible'
 import '@ant-design/compatible/assets/index.css'
-import { Comment, Avatar, Button, Divider, Input, Menu, Dropdown, message, Modal } from 'antd'
+import { Comment, Button, Divider, Input, Menu, Dropdown, message } from 'antd'
 import List from './list' // 评论列表
 import AppAvatar from '@/components/Avatar'
 
@@ -52,7 +50,7 @@ function Discuss(props) {
   const dispatch = useDispatch()
   const bus = useBus()
   const userInfo = useSelector((state:IRootState) => state.user)
-  const { username, role } = userInfo
+  const { username } = userInfo
 
   const { commentList, articleId } = props
   const [value, setValue] = useState('')

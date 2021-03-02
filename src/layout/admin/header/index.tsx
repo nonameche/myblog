@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
@@ -6,8 +6,7 @@ import { loginout } from '@/redux/user/actions'
 
 import { DownOutlined } from '@ant-design/icons'
 
-import { Button, Dropdown, Menu, Avatar } from 'antd'
-import logo from '@/assets/images/logo.jpeg'
+import { Dropdown, Menu } from 'antd'
 interface State {
   user:{}
 }
@@ -15,7 +14,7 @@ interface State {
 interface UserInfo{
   username?:''
 }
-function AdminHeader(props) {
+function AdminHeader() {
   const dispatch = useDispatch()
   const history = useHistory()
 
@@ -24,13 +23,13 @@ function AdminHeader(props) {
   const menu = (
     <Menu className='menu'>
       <Menu.Item>
-        <span onClick={e => history.push('/')}>
+        <span onClick={() => history.push('/')}>
           返回主页
         </span>
       </Menu.Item>
       <Menu.Item>
         <span
-          onClick={e => {
+          onClick={() => {
             dispatch(loginout())
             history.push('/')
           }}>

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { } from 'react'
 import { SIDEBAR } from '@/config'
-import axios from '@/utils/axios'
 import { useSelector } from 'react-redux'
 
 // components
@@ -13,7 +12,7 @@ import { ANNOUNCEMENT } from '@/config'
 
 import useFetchList from '@/hooks/useFetchList'
 
-function SideBar(props) {
+function SideBar() {
   const tagList = useSelector((state:any) => state.article.tagList || [])
 
   const { dataList: articleList } = useFetchList({

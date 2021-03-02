@@ -1,8 +1,10 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { Component, useEffect, useState } from 'react'
 
 import SimpleMDE from 'react-simplemde-editor'
 import 'easymde/dist/easymde.min.css'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { translateMarkdown } from '@/utils'
 
 function MdEditor(props) {

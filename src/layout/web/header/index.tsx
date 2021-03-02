@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Layout, Row, Col } from 'antd'
 import Left from './left'
 import Right from './right'

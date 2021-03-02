@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import navList from './navList'
 
 import { Link, useLocation } from 'react-router-dom'
