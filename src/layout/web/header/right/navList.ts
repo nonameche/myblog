@@ -19,14 +19,14 @@ export default [
     title: '关于',
     link: '/about'
   },
-  {
-    icon: 'app',
-    title: '旁门左道',
-    link: '/menu'
-  },
-  {
-    icon: 'navigation',
-    title: '网站导航',
-    link: '/navigation'
-  }
+  // {
+  //   icon: 'app',
+  //   title: '旁门左道',
+  //   link: '/menu'
+  // },
+  // {
+  //   icon: 'navigation',
+  //   title: '网站导航',
+  //   link: '/navigation'
+  // }
 ]
