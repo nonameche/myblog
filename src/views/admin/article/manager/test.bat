@@ -1,2 +1,0 @@
-ren *.jsx *.tsx
-
