@@ -30,3 +30,4 @@ yarn-error.log*
 /server/config
 # /.github
 build/
+.vscode/settings.json
