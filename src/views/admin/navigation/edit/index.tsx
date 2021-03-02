@@ -10,7 +10,7 @@ import MdEditor from '@/components/MdEditor'
 import List from './Tag'
 import useBreadcrumb from '@/hooks/useBreadcrumb'
 function Edit(props) {
-  const store = useSelector(state => ({
+  const store = useSelector((state:any) => ({
     tagList: state.article.tagList,
     categoryList: state.article.categoryList,
     authorId: state.user.userId
@@ -48,7 +48,7 @@ function Edit(props) {
   }, [store.tagList, store.categoryList])
 
   function fetchArticle(id) {
-    axios.get(`/article/${id}?type=0`).then(res => {
+    axios.get(`/article/${id}?type=0`).then((res:any) => {
       setTitle(res.title)
       setContent(res.content)
       const tags = res.tags.map(d => d.name)
@@ -70,7 +70,7 @@ function Edit(props) {
         categoryList: cateSelectedList,
         authorId: store.authorId
       })
-      .then(res => {
+      .then((res:any) => {
         Modal.confirm({
           title: '文章创建成功！是否立即查看？',
           onOk: () => props.history.push(`/article/${res.id}`)

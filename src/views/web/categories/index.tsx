@@ -5,7 +5,7 @@ import { Badge, Tag } from 'antd'
 import { Link } from 'react-router-dom'
 
 function Categories(props) {
-  const categoryList = useSelector(state => state.article.categoryList)
+  const categoryList = useSelector((state:any) => state.article.categoryList)
 
   return (
     <div className='app-categories'>

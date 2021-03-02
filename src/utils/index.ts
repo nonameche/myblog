@@ -108,6 +108,7 @@ export function debounce(func, wait) {
 
 // 生成 color
 export function genertorColor(list = [], colorList = COLOR_LIST) {
+  // console.log('🚀 ~ file: index.ts ~ line 111 ~ genertorColor ~ list', list)
   const _list = [...list]
   _list.forEach((l, i) => {
     l.color = colorList[i] || colorList[randomIndex(colorList)]

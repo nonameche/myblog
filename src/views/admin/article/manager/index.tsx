@@ -74,7 +74,7 @@ function ArticleManager(props) {
       {
         dataIndex: 'id',
         title: '操作',
-        render: (articleId, record) => {
+        render: (articleId, record:{id:number, title:string}) => {
           return (
             <ul className='action-list'>
               <li>

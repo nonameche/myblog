@@ -32,7 +32,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     // Any status code that lie within the range of 2xx cause this function to trigger
-    return response.data
+    return response
   },
   err => {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
@@ -43,6 +43,7 @@ service.interceptors.response.use(
         switch (status) {
           case 401:
             message.error((data && data.message) || '登录信息过期或未授权，请重新登录！')
+            console.log('登录过期')
             break
 
           default:

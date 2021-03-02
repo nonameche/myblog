@@ -44,7 +44,6 @@ const App = (props: any) => {
           key={newContextPath}
           path={newContextPath}
           render={props => {
-            console.log(item)
             document.title = item.title || '我的文章记录'
             return <item.component {...props}></item.component>
           }}

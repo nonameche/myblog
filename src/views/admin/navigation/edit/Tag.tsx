@@ -45,11 +45,12 @@ function AppTag(props) {
       const tagElem = (
         <CheckableTag
           key={item}
-          closable='true'
-          onClose={() => removeItem(item)}
+          // closable='true'
+          // onClose={() => removeItem(item)}
           checked={selectedList.includes(item)}
           onChange={checked => handleSelect(item, checked)}
-          color='#1890ff'>
+          // color='#1890ff'
+        >
           {isLongTag ? `${item.slice(0, 20)}...` : item}
         </CheckableTag>
       )

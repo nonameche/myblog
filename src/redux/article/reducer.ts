@@ -16,11 +16,11 @@ export default function articleReducer(state = defaultState, action) {
   const { type, payload } = action
   switch (type) {
     case TYPES.ARTICLE_GET_TAG_LIST:
-      const tagList = genertorColor(payload)
+      const tagList = genertorColor(payload.data)
       return { ...state, tagList }
 
     case TYPES.ARTICLE_GET_CATEGORY_LIST:
-      const categoryList = genertorColor(payload)
+      const categoryList = genertorColor(payload.data)
       return { ...state, categoryList }
 
     default:
