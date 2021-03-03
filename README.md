@@ -10,8 +10,6 @@
 * 我的博客地址: [闲情偶寄](https://lmsworld.cn/)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ### 实现功能
 
@@ -148,5 +146,3 @@ tags:
 - 标签：`Javascript` `ES6`
 
 如果导入标题一样的文件，可以确认是否覆盖原来的文章！
-
-PS : 觉得不错的伙伴可以给个 star ~~~ 或者 fork 下来看看哦。如果有什么建议，也可以提 issue 哦

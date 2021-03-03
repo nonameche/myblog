@@ -9,28 +9,44 @@ import SvgIcon from '@/components/SvgIcon'
 
 const skills = [
   {
-    label: '具备扎实的 Javascript 基础，熟练使用 ES6+ 语法。',
+    label: '熟练掌握 HTML5、CSS3、JavaScript',
+    rate: 4
+  },
+  {
+    label: '熟练掌握 ES6+ 常用语法，熟悉 TypeScript',
     rate: 3
   },
   {
-    label: '熟悉 Vue 并理解其原理，熟悉 react 框架及其用法，熟悉小程序及其用法',
+    label: '熟练掌握 Vue.js 框架及 Vue 全家桶',
     rate: 3
   },
   {
-    label: '熟练使用 Webpack 打包工具，熟悉常用工程化和模块化方案。',
+    label: '熟练掌握小程序原生开发，熟悉 uni-app',
     rate: 3
   },
   {
-    label: '熟悉 Koa、Mysql，针对需求可以做到简单的数据库设计、接口的开发与设计！',
+    label: '熟练掌握 Sass，Less 等 CSS 预处理器',
+    rate: 3
+  },
+  {
+    label: '熟练使用 Photoshop、Axure 等原型与设计工具',
+    rate: 3
+  },
+  {
+    label: '熟悉 React 框架及 React 全家桶，了解 React Native',
     rate: 2
   },
   {
-    label: '熟悉 HTTP 协议，缓存、性能优化、安全等，了解浏览器原理。',
+    label: '熟悉 Webpack 的基本配置和使用',
     rate: 2
   },
   {
-    label: '熟悉常用的算法与数据结构',
+    label: '熟悉 Node.js、MySQL，可以做到针对需求进行简单的数据库设计、接口的设计与开发',
     rate: 2
+  },
+  {
+    label: '了解 Python、C 语言',
+    rate: 1
   }
 ]
 
@@ -100,10 +116,10 @@ const MyInfo = () => {
       <li>
         商业自吹
         <ul>
+          <li>学习能力强：能够快速学习掌握新的技能、工具、满足实际工作需要</li>
+          <li>开发效率高：善用各种工具神器提高开发效率、减少重复性与低技术含量工作</li>
+          <li>沟通能力强：跨部门、跨岗位、跨地区……统统没问题</li>
           <li>搜索能力强：只有想不到，没有搜不到</li>
-          <li>开发效率高：善用各种工具,神器提升开发效率、减少重复性与低技术含量工作</li>
-          <li>学习能力强：能够快速学习掌握新的技能、工具，满足实际工作需要</li>
-          <li>能解决问题：只要思想不滑坡，办法总比困难多，能够利用多手段另辟蹊径解决问题</li>
         </ul>
       </li>
       <li>
@@ -111,7 +127,7 @@ const MyInfo = () => {
         <ul>
           <li>编程</li>
           <li>阅读</li>
-          <li>运动</li>
+          <li>旅游</li>
           <li>历史</li>
         </ul>
       </li>
