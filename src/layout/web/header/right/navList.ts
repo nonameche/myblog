@@ -19,11 +19,11 @@ export default [
     title: '关于',
     link: '/about'
   },
-  // {
-  //   icon: 'app',
-  //   title: '旁门左道',
-  //   link: '/menu'
-  // },
+  {
+    icon: 'app',
+    title: 'Explorer UI',
+    href: 'http://explorer.lmsworld.cn/'
+  },
   // {
   //   icon: 'navigation',
   //   title: '网站导航',

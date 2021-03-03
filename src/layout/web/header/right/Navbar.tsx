@@ -27,10 +27,10 @@ function NavBar(props) {
     <Menu mode={mode} selectedKeys={[location.pathname]} className='header-nav'>
       {navList.map(nav => (
         <Menu.Item key={nav.link} icon={nav.icon && getIcon(nav.icon)}>
-          <Link to={nav.link}>
+          {nav.href ? (<a className='nav-text' href={nav.href} target='blank'>{nav.title}</a>) : (<Link to={nav.link}>
             {/* {nav.icon && <LegacyIcon type={nav.icon} />} */}
             <span className='nav-text'>{nav.title}</span>
-          </Link>
+          </Link>)}
         </Menu.Item>
       ))}
     </Menu>
