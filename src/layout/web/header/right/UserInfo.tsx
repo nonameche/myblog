@@ -64,7 +64,7 @@ function UserInfo(props) {
               onClick={() => bus.emit('openSignModal', 'login')}>
               登录
             </Button>
-            <Button ghost type='ghost' size='small' onClick={() => bus.emit('openSignModal', 'register')}>
+            <Button ghost type='primary' size='small' onClick={() => bus.emit('openSignModal', 'register')}>
               注册
             </Button>
           </>
