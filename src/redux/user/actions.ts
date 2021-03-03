@@ -6,10 +6,10 @@ export const login = params => {
     axios.post('/login', params).then((res:any) => {
       dispatch({
         type: TYPES.USER_LOGIN,
-        payload: res
+        payload: res.data
       })
-      message.success(`登录成功, 欢迎您 ${res.username}`)
-      return res
+      message.success(`登录成功, 欢迎您 ${res.data.username}`)
+      return res.data
     })
 }
 
