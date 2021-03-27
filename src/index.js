@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import * as Sentry from '@sentry/react'
-import { Integrations } from '@sentry/tracing'
+// import * as Sentry from '@sentry/react'
+// import { Integrations } from '@sentry/tracing'
 
 import { Provider as BusProvider } from '@/hooks/useBus'
 
@@ -14,15 +14,15 @@ import store from '@/redux'
 import '@/assets/icons/iconfont'
 import '@/styles/index.less'
 
-Sentry.init({
-  dsn: 'https://923de7951ed64b0793fdd1fe4ece9204@o552443.ingest.sentry.io/5678284',
-  integrations: [new Integrations.BrowserTracing()],
+// Sentry.init({
+//   dsn: 'https://923de7951ed64b0793fdd1fe4ece9204@o552443.ingest.sentry.io/5678284',
+//   integrations: [new Integrations.BrowserTracing()],
 
-  // Set tracesSampleRate to 1.0 to capture 100%
-  // of transactions for performance monitoring.
-  // We recommend adjusting this value in production
-  tracesSampleRate: 1.0,
-})
+//   // Set tracesSampleRate to 1.0 to capture 100%
+//   // of transactions for performance monitoring.
+//   // We recommend adjusting this value in production
+//   tracesSampleRate: 1.0,
+// })
 
 var fundebug = require('fundebug-javascript')
 fundebug.apikey = '4963424eb3fb387d0695dafec7b232143eea36fe872a2d691e112e9766189ff4'
